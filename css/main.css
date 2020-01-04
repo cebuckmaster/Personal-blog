@@ -1,0 +1,109 @@
+@import "../veritas-design-tokens-v2.3.0/all.custom-properties.css";
+@import "../css/footer.css";
+@import "../css/base.css";
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "hd"
+        "nav"
+        "main"
+        "ft";
+}
+
+header {
+    grid-area: hd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: var(--vds-gradient-magenta-yellow);
+}
+
+.nested-grid {
+    display: grid;
+    grid-template-columns:  320px;
+    grid-auto-rows: auto;
+    column-gap: var(--vds-spacing-2x);
+    row-gap: var(--vds-spacing-2x);
+    justify-content: center;
+    margin-top: var(--vds-spacing-1x);
+    margin-bottom: var(--vds-spacing-1x);
+}
+
+.content {
+    grid-area: main;
+    background-image: url("../images/beers.png");
+}
+
+.card {
+    border: 0px solid var(--vds-color-blue);
+    padding: var(--vds-spacing-inset-half);
+    box-shadow: var(--vds-box-shadow-1);
+    transition: 0.3s;
+    background-color: var(--vds-color-yellow-lighter);
+    border-radius: var(--vds-border-radius-base);
+}
+
+.card:hover {
+    box-shadow: var(--vds-box-shadow-4);
+}
+
+.blog-date {
+    font-size: var(--vds-text-font-size-xs);
+}
+
+.blog-title {
+    font-size: var(--vds-heading-font-size-h2);
+    font-weight: var(--vds-font-weight-semibold);
+    margin-top: var(--vds-spacing-1x);
+    margin-bottom: 0px;
+}
+
+@media(min-width:420px) {
+    .nested-grid {
+        grid-template-columns:  400px;
+    }    
+}
+
+@media(min-width:900px) {
+
+    .container {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas: 
+            "hd hd hd"
+            "nav nav nav"
+            "main main main"
+            "ft ft ft";
+    }
+
+    .color-nav-before {
+        grid-column: 1 / 1;
+        grid-row: 2;
+        background-color: var(--vds-color-black);
+    }
+    
+    nav {
+        grid-column: 2;
+        grid-row: 2;
+        justify-content: left;
+        padding-left: 1rem;
+
+    }
+
+    .color-nav-after {
+        grid-column: 3 / 3;
+        grid-row: 2;
+        background-color: var(--vds-color-black);
+    }
+
+    .nested-grid {
+        grid-template-columns:  400px 400px;
+    }
+    
+    .content {
+        background-position: center;
+        background-repeat: no-repeat;
+    }    
+}

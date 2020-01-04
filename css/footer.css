@@ -1,0 +1,16 @@
+footer {
+    grid-area: ft;
+    background-color: var(--vds-color-yellow-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 6px solid var(--vds-color-black);
+}
+
+.footer-img {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    height: 30px;
+    width: 30px;
+}
+

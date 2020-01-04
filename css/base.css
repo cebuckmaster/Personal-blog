@@ -1,0 +1,49 @@
+body {
+    font-family: var(--vds-font-family-text);
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    background-color: var(--vds-color-black);
+    justify-content: center;
+}
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li a {
+    display: block;
+    color: var(--vds-color-white);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover {
+    background-color: rgb(59, 58, 58);
+}
+
+h1 {
+    font-size: var(--vds-heading-font-size-h1);
+}
+h2 {
+    font-size: var(--vds-heading-font-size-h2);
+}
+h3 {
+    font-size: var(--vds-heading-font-size-h3);
+}
+h4 {
+    font-size: var(--vds-heading-font-size-h4);
+}
+h5 {
+    font-size: var(--vds-heading-font-size-h5);
+}

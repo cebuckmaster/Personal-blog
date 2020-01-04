@@ -1,0 +1,103 @@
+@import "../veritas-design-tokens-v2.3.0/all.custom-properties.css";
+@import "../css/footer.css";
+@import "../css/base.css";
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "hd"
+        "nav"
+        "main"
+        "rightnav"
+        "ft";
+    justify-content: center;
+}
+
+header {
+    grid-area: hd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: var(--vds-gradient-magenta-yellow);
+}
+
+nav {
+    justify-content: flex-start;
+}
+
+.content {
+    grid-area: main;
+    display: block;
+    line-height: var(--vds-text-line-height-sm);
+}
+
+.beer-icon {
+    width: 4rem;
+    height: 6rem;
+    margin-right: 2rem;
+}
+
+.nav-box {
+    border-top: 2px solid var(--vds-color-black);
+}
+.article-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rightNav {
+    grid-area: rightnav;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: var(--vds-text-line-height-sm);
+}
+
+.archive-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.all-beers {
+    display: none;
+}
+
+article {
+    margin: 20px 10px 10px 20px;
+}
+
+@media(min-width:900px) {
+    .container {
+        grid-template-columns: 60% 40%;
+        grid-template-areas: 
+            "hd hd"
+            "nav nav"
+            "main rightnav"
+            "ft ft";
+    }
+
+    .nav-box {
+        border: none;
+    }
+
+    .content {
+        border-right: 2px solid var(--vds-color-black);
+    }
+
+    #archive {
+        border-top: 2px solid var(--vds-color-black);
+    }
+
+    .all-beers {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-top: 2px solid var(--vds-color-black);
+        padding: 1rem;
+    }
+}
