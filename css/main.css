@@ -50,8 +50,9 @@ header {
     box-shadow: var(--vds-box-shadow-4);
 }
 
-.blog-date {
-    font-size: var(--vds-text-font-size-xs);
+.blog-pic {
+    width: 20rem;
+    height: 15rem;
 }
 
 .blog-title {
@@ -59,6 +60,27 @@ header {
     font-weight: var(--vds-font-weight-semibold);
     margin-top: var(--vds-spacing-1x);
     margin-bottom: 0px;
+    border-top: 2px solid var(--vds-color-black);
+}
+
+.blog-date {
+    font-size: var(--vds-text-font-size-xs);
+}
+
+.blog-button {
+    background-color: var(--vds-color-blue);
+    color: var(--vds-color-white);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--vds-border-radius-base);
+    border: 2px solid var(--vds-color-blue);
+    transition: 0.4s;
+    margin-bottom: 0.5rem;
+}
+
+.blog-button:hover {
+    background-color: var(--vds-color-white);
+    color: var(--vds-color-black);
 }
 
 @media(min-width:420px) {

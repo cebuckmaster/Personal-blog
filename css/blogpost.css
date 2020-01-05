@@ -27,6 +27,22 @@ nav {
     justify-content: flex-start;
 }
 
+.home-button {
+    background-color: var(--vds-color-blue);
+    color: var(--vds-color-white);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--vds-border-radius-base);
+    border: 2px solid var(--vds-color-blue);
+    transition: 0.4s;
+    margin: 0.5rem;    
+}
+
+.home-button:hover {
+    background-color: var(--vds-color-white);
+    color: var(--vds-color-black);
+}
+
 .content {
     grid-area: main;
     display: block;
